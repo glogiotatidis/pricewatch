@@ -25,3 +25,8 @@ jobs:
         shell: bash
         run:
           echo "foo" > "data/bar-$(date +%Y-%m-%d-%H-%M).txt"
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: "New data"
+          add: 'data/*'
