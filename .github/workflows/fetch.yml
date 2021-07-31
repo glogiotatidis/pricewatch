@@ -1,0 +1,19 @@
+name: Fetch
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC Time.
+    - cron: "0 22 * * Tue,Thu,Sat"
+  push:
+   branches:
+     - master
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          architecture: 'x64'
