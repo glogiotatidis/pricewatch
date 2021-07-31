@@ -24,7 +24,7 @@ jobs:
       - name: Scrape
         shell: bash
         run:
-          echo "foo" > "data/bar-$(date +%Y-%m-%d-%H-%M).txt"
+          scrapy runspider pitsias.py  -s DOWNLOAD_DELAY=.5 --output "pitsias-$(date +%Y-%m-%d-%H-%M).json"
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
