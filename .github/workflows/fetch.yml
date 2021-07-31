@@ -4,9 +4,6 @@ on:
   schedule:
     # UTC Time.
     - cron: "0 22 * * Tue,Thu,Sat"
-  push:
-   branches:
-     - master
 jobs:
   fetch:
     runs-on: ubuntu-latest
