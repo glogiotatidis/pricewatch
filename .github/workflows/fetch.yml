@@ -8,7 +8,7 @@ on:
    branches:
      - master
 jobs:
-  start:
+  fetch:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
@@ -21,3 +21,7 @@ jobs:
         shell: bash
         run:
           pip install -r requirements.txt
+      - name: Scrape
+        shell: bash
+        run:
+          echo "foo" > "data/bar-$(date +%Y-%m-%d-%H-%M).txt"
