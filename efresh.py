@@ -16,6 +16,8 @@ class Efresh(scrapy.Spider):
                 'url': product['links']['app_web'],
                 'name': product['title'],
                 'id': product['kodikos'],
+                # Looks like some products feature the barcode at the end of the
+                # image URL.
                 'barcode': None,
                 'image_url': product['image']['url'],
                 'price': product['price'] ,
