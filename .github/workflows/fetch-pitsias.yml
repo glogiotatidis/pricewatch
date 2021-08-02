@@ -1,4 +1,4 @@
-name: Fetch
+name: Fetch Pitsias
 on:
   workflow_dispatch:
   schedule:

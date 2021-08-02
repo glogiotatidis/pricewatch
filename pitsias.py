@@ -4,10 +4,10 @@ import scrapy
 ROOT_URL = 'https://pitsias.gr'
 START_URL = ROOT_URL + '/search?p={page}&q='
 
+
 class Pitsias(scrapy.Spider):
     name = 'pitsias'
     page = 1
-    products = 1
     start_urls = [START_URL.format(page=1)]
 
     def parse_product(self, response):
