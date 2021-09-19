@@ -7,7 +7,7 @@ START_URL = ROOT_URL + '/api/list?page={page}'
 
 class AB(scrapy.Spider):
     name = 'ab'
-    page = 20
+    page = 1
     url = "https://api.ab.gr"
     start_urls = [START_URL.format(page=1)]
 
